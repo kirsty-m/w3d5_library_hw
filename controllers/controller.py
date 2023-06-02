@@ -7,3 +7,7 @@ from models.book import *
 def index():
     return render_template("index.html", books=books)
 
+@app.route("/books/<index>")
+def show_book_details(index):
+    return render_template("book_details.html", book = books[int(index)])
+
