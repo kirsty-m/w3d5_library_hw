@@ -1,0 +1,144 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    margin:0px;
+    height: 100vh;
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    background-color:black;
+    padding: 20px;
+    grid-area: header;
+}
+
+header > nav > ul {
+    color: white;
+    list-style: none;
+}
+
+header > nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    padding: 10px;
+}
+
+header > nav > ul > a {
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#book-list {
+    margin: 0px;
+    background-color:white;
+    padding: 20px;
+    padding-left: 50px;
+    grid-area: main;
+    height:
+    
+}
+
+#book-list > h1 {
+    font-size: large;
+}
+
+#book-list > a {
+    color: black;
+    text-decoration: none;
+    font-size:larger
+}
+
+#book-list > a:hover {
+    font-weight: bold;
+    color: deeppink;
+    
+}
+
+#book-list > form > input[type=submit]{
+    background-color: rgb(213, 213, 213);
+    color: black;
+    border: 0px;
+    padding: 5px;
+    width:fit-content;
+    border-radius: 5px
+}
+
+#book-list > form > input[type=submit]:hover{
+    background-color: deeppink;
+    color: white;
+}
+
+#add-book-form {
+    grid-area: form;
+    background-color: deeppink;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: center;
+}
+
+#add-book-form > h1 {
+    display: flex;
+    flex-wrap: wrap;
+    margins: 20px;
+    font-size:large;
+    font-w
+}
+
+#add-book-form > form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+#add-book-form > form > input[type=submit] {
+    background-color: black;
+    color: white;
+    border: 0px;
+    padding: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+#add-book-form > form > input[type=submit]:hover {
+    background-color: white;
+    color: black;
+}
+
+#add-book-form > form > input[type=text]{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+
+footer {
+
+    background-color: black;
+    color: white;
+    grid-area: footer;
+    justify-content: space-around;
+    padding: 20px;
+    display: flex;
+    align-content: flex-end;
+    
+    
+}
+
+#grid-container{
+
+    display:grid;
+    grid-template-areas: 
+    'header header'
+    'main form'
+    'footer footer';
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 20% 70% 10%;
+    height: 100vh;
+}

@@ -2,23 +2,29 @@
 
 {% block content %}
 
-    <div class="book-list">
+    <div id="book-list" style="overflow-y:scroll;">
         <h1>Book List:</h1>
 
         {% for book in books %}
-        <a href="/books/{{books.index(book)}}">{{book.title}}</a>
+        <a href="/books/{{books.index(book)}}">{{book.title}} by {{book.author}}</a>
+        <form class="form-inline" action="/books/del/{{books.index(book)}}" method="POST">
+            <input type="submit" value="Remove">
+        </form>       
+        
         {% endfor %}
     </div>
-
-    <form action="books" method="post">
-        <label for="title">Book Title</label>
-        <input type="text" name="title" id="title">
-        <label for="author">Author</label>
-        <input type="text" name="author" id="author">
-        <label for="genre">Genre</label>
-        <input type="text" name="genre" id="genre">
-        <input type="submit" value="Add Book">
-    </form>
-
+    <div id="add-book-form">
+        <h1>Add a book to the library:</h1><br>
+        <form action="books" method="post">
+            <label for="title">Book Title</label>
+            <input type="text" name="title" id="title"><br>
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author"><br>
+            <label for="genre">Genre</label>
+            <input type="text" name="genre" id="genre">
+            <br>
+            <input type="submit" value="Add Book">
+        </form>
+    </div>
 
 {% endblock %}

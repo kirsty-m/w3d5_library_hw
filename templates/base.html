@@ -1,20 +1,24 @@
 <html>
     <head>
-        <title>Library</title>
+        <title>Kirsty's Library</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 
     <body>
+        <div id="grid-container">
+            <header>
+                <nav>
+                    <h1>Kirsty's Library</h1>
+                    <ul>
+                        <li class="navLink"><a href="/books" style="color: white; text-decoration:none;">Home</a></li>
+                    </ul>
+                </nav>
+            </header>
+            {% block content %}
 
-        <nav>
-            <h1>Library</h1>
-            <ul>
-                <li class="navLink"><a href="/books">Home</a></li>
-            </ul>
-        </nav>
+            {% endblock %}
 
-        {% block content %}
-
-        {% endblock %}
-
+            <footer>Please return books on time. Thanks!</footer>
+        </div>
     </body>
 </html>
