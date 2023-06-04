@@ -32,6 +32,7 @@ header > nav > ul > a {
     align-content: center;
 }
 
+
 #book-list {
     margin: 0px;
     background-color:white;
@@ -129,6 +130,14 @@ footer {
     align-content: flex-end;
     
     
+}
+
+#book-details{
+    padding: 50px;    
+}
+
+#book-details > h2{
+    font-size: medium;
 }
 
 #grid-container{
